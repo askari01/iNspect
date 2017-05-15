@@ -14,6 +14,9 @@
 
 @implementation ViewController
 
+NSTimer *myTimer;
+BOOL theBool;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [_webView setDelegate:self];
@@ -27,17 +30,24 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    
+    _myProgressView.progress = 0;
+    theBool = false;
+    //0.01667 is roughly 1/60, so it will update at 60 FPS
+    myTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
+
 }
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    
+    theBool = true;
 }
+
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"Failed to load with error :%@",[error debugDescription]);
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -79,5 +89,28 @@
     [self.webView reload];
     [refreshController endRefreshing];
 }
+
+-(void)timerCallback {
+    if (theBool) {
+        if (_myProgressView.progress >= 1) {
+            _myProgressView.hidden = true;
+            [myTimer invalidate];
+        }
+        else {
+            _myProgressView.progress += 0.1;
+        }
+    }
+    else {
+        if (_myProgressView.hidden) {
+            _myProgressView.hidden = false;
+        }
+        _myProgressView.progress += 0.05;
+        if (_myProgressView.progress >= 0.95) {
+            _myProgressView.progress = 0.95;
+        }
+    }
+}
+
+
 
 @end

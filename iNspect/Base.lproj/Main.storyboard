@@ -25,16 +25,23 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="R88-Kt-slJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2iz-2x-omd" secondAttribute="trailing" id="TfF-8n-RKc"/>
-                            <constraint firstItem="2iz-2x-omd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dZb-nd-xJR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2iz-2x-omd" secondAttribute="bottom" id="ihS-S3-Hjx"/>
-                            <constraint firstItem="2iz-2x-omd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j9A-zk-08R"/>
+                            <constraint firstItem="2iz-2x-omd" firstAttribute="trailing" secondItem="R88-Kt-slJ" secondAttribute="trailing" id="Cq4-Rn-6eC"/>
+                            <constraint firstItem="2iz-2x-omd" firstAttribute="top" secondItem="R88-Kt-slJ" secondAttribute="top" id="FpW-pO-Lr9"/>
+                            <constraint firstItem="2iz-2x-omd" firstAttribute="leading" secondItem="R88-Kt-slJ" secondAttribute="leading" id="WgW-eM-RR3"/>
+                            <constraint firstItem="R88-Kt-slJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="b20-Ra-cIH"/>
+                            <constraint firstItem="R88-Kt-slJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iMT-Bl-rg1"/>
+                            <constraint firstAttribute="trailing" secondItem="R88-Kt-slJ" secondAttribute="trailing" id="pwZ-aO-byy"/>
+                            <constraint firstItem="2iz-2x-omd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="qqY-0V-rbX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myProgressView" destination="R88-Kt-slJ" id="0Um-rb-sUt"/>
                         <outlet property="webView" destination="2iz-2x-omd" id="0gO-p4-h7b"/>
                     </connections>
                 </viewController>
