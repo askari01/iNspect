@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36E4CAD61EDD999A00BD8ADF /* iNspect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iNspect.entitlements; sourceTree = "<group>"; };
 		8B365BF41EB8421D00876333 /* iNspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B365BF81EB8421D00876333 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B365BFA1EB8421D00876333 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		8B365BF61EB8421D00876333 /* iNspect */ = {
 			isa = PBXGroup;
 			children = (
+				36E4CAD61EDD999A00BD8ADF /* iNspect.entitlements */,
 				8B365BFA1EB8421D00876333 /* AppDelegate.h */,
 				8B365BFB1EB8421D00876333 /* AppDelegate.m */,
 				8B365BFD1EB8421D00876333 /* ViewController.h */,
@@ -210,6 +212,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 79Q3Z37GR8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					8B365C0C1EB8421D00876333 = {
 						CreatedOnToolsVersion = 8.1;
@@ -428,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iNspect/iNspect.entitlements;
 				DEVELOPMENT_TEAM = 79Q3Z37GR8;
 				INFOPLIST_FILE = iNspect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -442,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iNspect/iNspect.entitlements;
 				DEVELOPMENT_TEAM = 79Q3Z37GR8;
 				INFOPLIST_FILE = iNspect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
