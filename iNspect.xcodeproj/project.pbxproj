@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360865281EDFFF3600742A7B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360865271EDFFF3600742A7B /* SystemConfiguration.framework */; };
+		3608652B1EDFFF7900742A7B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3608652A1EDFFF7900742A7B /* Reachability.m */; };
 		8B365BF91EB8421D00876333 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B365BF81EB8421D00876333 /* main.m */; };
 		8B365BFC1EB8421D00876333 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B365BFB1EB8421D00876333 /* AppDelegate.m */; };
 		8B365BFF1EB8421D00876333 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B365BFE1EB8421D00876333 /* ViewController.m */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360865271EDFFF3600742A7B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		360865291EDFFF7900742A7B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3608652A1EDFFF7900742A7B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		36E4CAD61EDD999A00BD8ADF /* iNspect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iNspect.entitlements; sourceTree = "<group>"; };
 		8B365BF41EB8421D00876333 /* iNspect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNspect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B365BF81EB8421D00876333 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360865281EDFFF3600742A7B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360865261EDFFF3600742A7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				360865271EDFFF3600742A7B /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B365BEB1EB8421D00876333 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +100,7 @@
 				8B365C101EB8421D00876333 /* iNspectTests */,
 				8B365C1B1EB8421D00876333 /* iNspectUITests */,
 				8B365BF51EB8421D00876333 /* Products */,
+				360865261EDFFF3600742A7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -108,6 +123,8 @@
 				8B365BFB1EB8421D00876333 /* AppDelegate.m */,
 				8B365BFD1EB8421D00876333 /* ViewController.h */,
 				8B365BFE1EB8421D00876333 /* ViewController.m */,
+				360865291EDFFF7900742A7B /* Reachability.h */,
+				3608652A1EDFFF7900742A7B /* Reachability.m */,
 				8B365C001EB8421D00876333 /* Main.storyboard */,
 				8B365C031EB8421D00876333 /* Assets.xcassets */,
 				8B365C051EB8421D00876333 /* LaunchScreen.storyboard */,
@@ -284,6 +301,7 @@
 			files = (
 				8B365BFF1EB8421D00876333 /* ViewController.m in Sources */,
 				8B365BFC1EB8421D00876333 /* AppDelegate.m in Sources */,
+				3608652B1EDFFF7900742A7B /* Reachability.m in Sources */,
 				8B365BF91EB8421D00876333 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
